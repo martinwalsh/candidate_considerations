@@ -41,7 +41,7 @@ $ make help
 Targets:
   virtualenv          installs python dependencies
   clean               remove build artifacts
-  run                 Launch the jupyter playbook
+  run                 Launch the candidate considerations notebook
   help                displays this message
 ```
 
