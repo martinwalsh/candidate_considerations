@@ -25,6 +25,9 @@ What you'll find inside ...
 * virtualenv
 * make (and awk, for help text)
 
+NOTE: The makefile has been tested on Mac OS X (El Capitan) only, but should
+work fine on any other unix-like platform. YMMV.
+
 ## Launching the Jupyter notebook
 
 ```
