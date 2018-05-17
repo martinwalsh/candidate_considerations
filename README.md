@@ -16,7 +16,7 @@ experiment.
 What you'll find inside ...
 
 * A completed sample [survey](survey.csv)
-* An ipython/jupyter [notebook](Candidate Considerations Survey Visualization.ipynb) (where the action is)
+* An ipython/jupyter [notebook](Candidate%20Considerations%20Survey%20Visualization.ipynb) (where the action is)
 * A [Makefile](#other-make-targets)
 
 ## Requirements
