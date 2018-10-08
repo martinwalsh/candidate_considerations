@@ -1,3 +1,5 @@
+.docker-compose-build-complete
 .ipynb_checkpoints/
 .env/
 *.py[co]
+*.sw[po]

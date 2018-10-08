@@ -1,0 +1,10 @@
+version: '3'
+services:
+  notebook:
+    build:
+      context: ./
+    ports:
+      - '8888:8888'
+    volumes:
+      - ./src:/app/src:rw
+    command: pipenv run jupyter notebook src/CandidateConsiderations.ipynb

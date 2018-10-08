@@ -2,7 +2,8 @@
 
 # stolen shamelessly, and adapted, from http://stackoverflow.com/a/24669479/780220
 import numpy as np
-import pylab as pl
+import pylab as pl  # noqa
+
 
 class Radar(object):
 
@@ -12,12 +13,11 @@ class Radar(object):
 
         self.n = len(titles)
         self.angles = np.degrees(np.arange(0.0, 2*np.pi, 2*np.pi/self.n))
-        #self.angles = np.arange(90, 90+360, 360.0/self.n)
-        self.axes = [fig.add_axes(rect, projection="polar", label="axes%d" % i) 
-                         for i in range(self.n)]
+        # self.angles = np.arange(90, 90+360, 360.0/self.n)
+        self.axes = [fig.add_axes(rect, projection="polar", label="axes%d" % i) for i in range(self.n)]
 
         self.ax = self.axes[0]
-        self.ax.set_thetagrids(self.angles, labels=titles, fontsize=11, frac=1.05, rotation=0)
+        self.ax.set_thetagrids(self.angles, labels=titles, fontsize=11, rotation=0)
 
         for ax in self.axes[1:]:
             ax.patch.set_visible(False)
@@ -34,7 +34,6 @@ class Radar(object):
         values = np.r_[values, values[0]]
         self.ax.plot(angle, values, *args, **kw)
         self.ax.fill(angle, values, alpha=0.15)
-
 
 
 # similarly stolen from http://matplotlib.org/examples/api/radar_chart.html
