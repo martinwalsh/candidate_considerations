@@ -15,14 +15,14 @@ experiment.
 
 What you'll find inside ...
 
-* A completed sample [survey](survey.csv)
-* An ipython/jupyter [notebook](Candidate%20Considerations%20Survey%20Visualization.ipynb) (where the action is)
+* A completed sample [survey](src/survey.csv)
+* An ipython/jupyter [notebook](src/CandidateConsiderations.ipynb) (where the action is)
 * A [Makefile](#other-make-targets)
 
 ## Requirements
 
-* python2.7
-* virtualenv
+* docker
+* docker-compose
 * make (and awk, for help text)
 
 NOTE: The makefile has been tested on Mac OS X (El Capitan) only, but should
@@ -31,20 +31,17 @@ work fine on any other unix-like platform. YMMV.
 ## Launching the Jupyter notebook
 
 ```
-make run
+make up
 ```
-
-The above will check that python (and virtualenv) are installed, `pip install`
-the python dependencies, and launch the jupyter notebook.
 
 ## Other make targets
 
 ```
 $ make help
 Targets:
-  virtualenv          installs python dependencies
-  clean               remove build artifacts
-  run                 Launch the candidate considerations notebook
-  help                displays this message
+  build       build docker images in config (force rebuild with -B)
+  down        run docker-compose down
+  clean       remove docker-compose artifacts
+  up          run docker-compose up
+  help        displays this message
 ```
-
